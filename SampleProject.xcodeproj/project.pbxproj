@@ -19,6 +19,7 @@
 		845D29CE1FC1B5FE008B9FE7 /* SampleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D29CD1FC1B5FE008B9FE7 /* SampleRequest.swift */; };
 		845D29D21FC1B6CE008B9FE7 /* sampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D29D11FC1B6CE008B9FE7 /* sampleData.swift */; };
 		845D29D41FC1BB9F008B9FE7 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D29D31FC1BB9F008B9FE7 /* BaseRequest.swift */; };
+		845D29D81FC1CF39008B9FE7 /* Basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D29D71FC1CF39008B9FE7 /* Basic.swift */; };
 		97672ADA3B5BCE2ED67A548B /* Pods_SampleProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62EEBA96DA5EC3B29000247B /* Pods_SampleProjectUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		845D29CD1FC1B5FE008B9FE7 /* SampleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleRequest.swift; sourceTree = "<group>"; };
 		845D29D11FC1B6CE008B9FE7 /* sampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sampleData.swift; sourceTree = "<group>"; };
 		845D29D31FC1BB9F008B9FE7 /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
+		845D29D71FC1CF39008B9FE7 /* Basic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basic.swift; sourceTree = "<group>"; };
 		8C1179BA4224B04E7FBD5D92 /* Pods-SampleProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleProjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SampleProjectUITests/Pods-SampleProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AEA09FC292930B9AAE23B09D /* Pods-SampleProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SampleProjectTests/Pods-SampleProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		E144C7AA295C5FCFD88942B6 /* Pods-SampleProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SampleProject/Pods-SampleProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				845D299F1FC1B4B6008B9FE7 /* AppDelegate.swift */,
+				845D29D71FC1CF39008B9FE7 /* Basic.swift */,
 				845D29A11FC1B4B6008B9FE7 /* ViewController.swift */,
 				845D29A31FC1B4B6008B9FE7 /* Main.storyboard */,
 				845D29CF1FC1B69D008B9FE7 /* Api */,
@@ -487,6 +490,7 @@
 			files = (
 				845D29D41FC1BB9F008B9FE7 /* BaseRequest.swift in Sources */,
 				845D29A21FC1B4B6008B9FE7 /* ViewController.swift in Sources */,
+				845D29D81FC1CF39008B9FE7 /* Basic.swift in Sources */,
 				845D29A01FC1B4B6008B9FE7 /* AppDelegate.swift in Sources */,
 				845D29CE1FC1B5FE008B9FE7 /* SampleRequest.swift in Sources */,
 				845D29D21FC1B6CE008B9FE7 /* sampleData.swift in Sources */,
