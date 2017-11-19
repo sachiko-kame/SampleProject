@@ -22,6 +22,8 @@
 		845D29D81FC1CF39008B9FE7 /* Basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D29D71FC1CF39008B9FE7 /* Basic.swift */; };
 		845D29DC1FC1CFC2008B9FE7 /* SampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D29DB1FC1CFC2008B9FE7 /* SampleView.swift */; };
 		845D29DF1FC1CFFD008B9FE7 /* SampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D29DE1FC1CFFD008B9FE7 /* SampleModel.swift */; };
+		845D29E21FC1D144008B9FE7 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D29E11FC1D144008B9FE7 /* UIColorExtension.swift */; };
+		845D29E41FC1D16F008B9FE7 /* CGRectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D29E31FC1D16F008B9FE7 /* CGRectExtension.swift */; };
 		97672ADA3B5BCE2ED67A548B /* Pods_SampleProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62EEBA96DA5EC3B29000247B /* Pods_SampleProjectUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,8 @@
 		845D29D71FC1CF39008B9FE7 /* Basic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basic.swift; sourceTree = "<group>"; };
 		845D29DB1FC1CFC2008B9FE7 /* SampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleView.swift; sourceTree = "<group>"; };
 		845D29DE1FC1CFFD008B9FE7 /* SampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleModel.swift; sourceTree = "<group>"; };
+		845D29E11FC1D144008B9FE7 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		845D29E31FC1D16F008B9FE7 /* CGRectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectExtension.swift; sourceTree = "<group>"; };
 		8C1179BA4224B04E7FBD5D92 /* Pods-SampleProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleProjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SampleProjectUITests/Pods-SampleProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AEA09FC292930B9AAE23B09D /* Pods-SampleProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SampleProjectTests/Pods-SampleProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		E144C7AA295C5FCFD88942B6 /* Pods-SampleProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SampleProject/Pods-SampleProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 				845D29DD1FC1CFE2008B9FE7 /* Model */,
 				845D29CF1FC1B69D008B9FE7 /* Api */,
 				845D29D01FC1B6B4008B9FE7 /* Data */,
+				845D29E01FC1D122008B9FE7 /* Extension */,
 				845D29A61FC1B4B6008B9FE7 /* Assets.xcassets */,
 				845D29A81FC1B4B6008B9FE7 /* LaunchScreen.storyboard */,
 				845D29AB1FC1B4B6008B9FE7 /* Info.plist */,
@@ -211,6 +216,15 @@
 				845D29DE1FC1CFFD008B9FE7 /* SampleModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		845D29E01FC1D122008B9FE7 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				845D29E11FC1D144008B9FE7 /* UIColorExtension.swift */,
+				845D29E31FC1D16F008B9FE7 /* CGRectExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		D681CF978201BE81C7844FA3 /* Frameworks */ = {
@@ -523,6 +537,8 @@
 				845D29DC1FC1CFC2008B9FE7 /* SampleView.swift in Sources */,
 				845D29D81FC1CF39008B9FE7 /* Basic.swift in Sources */,
 				845D29A01FC1B4B6008B9FE7 /* AppDelegate.swift in Sources */,
+				845D29E41FC1D16F008B9FE7 /* CGRectExtension.swift in Sources */,
+				845D29E21FC1D144008B9FE7 /* UIColorExtension.swift in Sources */,
 				845D29CE1FC1B5FE008B9FE7 /* SampleRequest.swift in Sources */,
 				845D29D21FC1B6CE008B9FE7 /* sampleData.swift in Sources */,
 				845D29DF1FC1CFFD008B9FE7 /* SampleModel.swift in Sources */,
