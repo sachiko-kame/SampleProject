@@ -12,6 +12,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    
+        sampleData.sample(request: SampleRequest()){ response in
+            if(response.value != nil){
+                print(String(describing: response.value?.limit))
+            }else{
+                print("レスポンスに失敗")
+            }
+            
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
 
