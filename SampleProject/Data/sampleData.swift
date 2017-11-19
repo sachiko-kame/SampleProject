@@ -18,13 +18,14 @@ struct sampleData {
             case .success(let response):
                 handler(.success(response))
             
-            case .failure(.responseError(let responseError as SampleError)):
-                print("response error: \(responseError)")
+            case .failure(.responseError(let responseError)):
                 handler(.failure(.responseError(responseError)))
             
-            case .failure(let error):
-                print("error: \(error)")
-                handler(.failure(error))
+            case .failure(.requestError(let requestError)):
+                handler(.failure(.requestError(requestError)))
+                
+            case .failure(.connectionError(let connectionError)):
+                handler(.failure(.connectionError(connectionError)))
             }
         }
     }
