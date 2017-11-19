@@ -14,16 +14,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    
-        sampleData.sample(request: SampleRequest()){ response in
-            if(response.value != nil){
-                print(String(describing: response.value?.limit))
-            }else{
-                print("レスポンスに失敗")
-            }
-            
-        }
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,6 +23,9 @@ class ViewController: UIViewController {
     
     override func loadView() {
         self.view = SampleView(model: sampleModel)
+        sampleModel.data{
+            (self.view as! SampleView).tableView.reloadData()
+        }
     }
 
 

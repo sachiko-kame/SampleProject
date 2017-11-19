@@ -10,7 +10,7 @@ import UIKit
 
 class SampleModel: NSObject, UITableViewDelegate, UITableViewDataSource{
 
-    private let Items: NSArray = ["🐱猫", "🐶犬", "🐢亀","🦌鹿","🌸花"]
+    private var Items: Array<Int> = []
     
     //Cellの総数を返すデータソースメソッド.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,5 +38,18 @@ class SampleModel: NSObject, UITableViewDelegate, UITableViewDataSource{
     //セルの高さを設定
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
+    }
+    
+    func data(handler:@escaping () -> ()){
+        sampleData.sample(request: SampleRequest()){ response in
+            if(response.value != nil){
+                self.Items = [(response.value?.limit)!]
+                handler()
+            }else{
+                print("レスポンスに失敗")
+                handler()
+            }
+            
+        }
     }
 }
