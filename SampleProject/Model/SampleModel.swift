@@ -8,6 +8,35 @@
 
 import UIKit
 
-class SampleModel: NSObject {
+class SampleModel: NSObject, UITableViewDelegate, UITableViewDataSource{
 
+    private let Items: NSArray = ["🐱猫", "🐶犬", "🐢亀","🦌鹿","🌸花"]
+    
+    //Cellの総数を返すデータソースメソッド.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return Items.count
+    }
+    
+    //タップされた時に呼ばれる
+    func tableView(_ table: UITableView, didSelectRowAt indexPath:IndexPath) {
+        table.deselectRow(at: indexPath, animated: true)
+        print("\(Items[indexPath.row])")
+    }
+    
+    //Cellに値を設定するデータソースメソッド.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath as IndexPath)
+        cell.textLabel?.textColor = UIColor.darkGray
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 20)
+        cell.accessoryType = .disclosureIndicator
+        cell.textLabel!.text = "\(Items[indexPath.row])"
+        
+        return cell
+    }
+    
+    //セルの高さを設定
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
 }

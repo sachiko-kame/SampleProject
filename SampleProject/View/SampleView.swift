@@ -9,15 +9,16 @@
 import UIKit
 
 class SampleView: UIView {
-
-    let redView = UIView()
+    
     let tableView = UITableView()
     
     //ここで入れたいものを入れる
     required init(model: SampleModel) {
         super.init(frame: CGRect.zero);
         self.addSubview(tableView)
-        self.addSubview(redView)
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
+        self.tableView.delegate = model
+        self.tableView.dataSource = model
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -28,7 +29,5 @@ class SampleView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         tableView.frame = self.frame
-        redView.frame = CGRect(x:0, y:0, width:100, height:100)
-        redView.backgroundColor = UIColor.red
     }
 }
