@@ -26,6 +26,11 @@ class ViewController: UIViewController {
         sampleModel.data{ response in
             if(response == "成功"){
                 (self.view as! SampleView).tableView.reloadData()
+            }else{
+                let View = UIView()
+                View.backgroundColor = UIColor.green
+                View.frame = self.view.frame
+                (self.view as! SampleView).tableView.addSubview(View)
             }
         }
     }
