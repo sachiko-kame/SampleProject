@@ -20,6 +20,8 @@
 		845D29D21FC1B6CE008B9FE7 /* sampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D29D11FC1B6CE008B9FE7 /* sampleData.swift */; };
 		845D29D41FC1BB9F008B9FE7 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D29D31FC1BB9F008B9FE7 /* BaseRequest.swift */; };
 		845D29D81FC1CF39008B9FE7 /* Basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D29D71FC1CF39008B9FE7 /* Basic.swift */; };
+		845D29DC1FC1CFC2008B9FE7 /* SampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D29DB1FC1CFC2008B9FE7 /* SampleView.swift */; };
+		845D29DF1FC1CFFD008B9FE7 /* SampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D29DE1FC1CFFD008B9FE7 /* SampleModel.swift */; };
 		97672ADA3B5BCE2ED67A548B /* Pods_SampleProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62EEBA96DA5EC3B29000247B /* Pods_SampleProjectUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +65,8 @@
 		845D29D11FC1B6CE008B9FE7 /* sampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sampleData.swift; sourceTree = "<group>"; };
 		845D29D31FC1BB9F008B9FE7 /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
 		845D29D71FC1CF39008B9FE7 /* Basic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basic.swift; sourceTree = "<group>"; };
+		845D29DB1FC1CFC2008B9FE7 /* SampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleView.swift; sourceTree = "<group>"; };
+		845D29DE1FC1CFFD008B9FE7 /* SampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleModel.swift; sourceTree = "<group>"; };
 		8C1179BA4224B04E7FBD5D92 /* Pods-SampleProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleProjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SampleProjectUITests/Pods-SampleProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AEA09FC292930B9AAE23B09D /* Pods-SampleProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SampleProjectTests/Pods-SampleProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		E144C7AA295C5FCFD88942B6 /* Pods-SampleProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SampleProject/Pods-SampleProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -137,8 +141,10 @@
 			children = (
 				845D299F1FC1B4B6008B9FE7 /* AppDelegate.swift */,
 				845D29D71FC1CF39008B9FE7 /* Basic.swift */,
-				845D29A11FC1B4B6008B9FE7 /* ViewController.swift */,
 				845D29A31FC1B4B6008B9FE7 /* Main.storyboard */,
+				845D29D91FC1CF67008B9FE7 /* ViewController */,
+				845D29DA1FC1CFA8008B9FE7 /* View */,
+				845D29DD1FC1CFE2008B9FE7 /* Model */,
 				845D29CF1FC1B69D008B9FE7 /* Api */,
 				845D29D01FC1B6B4008B9FE7 /* Data */,
 				845D29A61FC1B4B6008B9FE7 /* Assets.xcassets */,
@@ -181,6 +187,30 @@
 				845D29D11FC1B6CE008B9FE7 /* sampleData.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		845D29D91FC1CF67008B9FE7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				845D29A11FC1B4B6008B9FE7 /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		845D29DA1FC1CFA8008B9FE7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				845D29DB1FC1CFC2008B9FE7 /* SampleView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		845D29DD1FC1CFE2008B9FE7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				845D29DE1FC1CFFD008B9FE7 /* SampleModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		D681CF978201BE81C7844FA3 /* Frameworks */ = {
@@ -490,10 +520,12 @@
 			files = (
 				845D29D41FC1BB9F008B9FE7 /* BaseRequest.swift in Sources */,
 				845D29A21FC1B4B6008B9FE7 /* ViewController.swift in Sources */,
+				845D29DC1FC1CFC2008B9FE7 /* SampleView.swift in Sources */,
 				845D29D81FC1CF39008B9FE7 /* Basic.swift in Sources */,
 				845D29A01FC1B4B6008B9FE7 /* AppDelegate.swift in Sources */,
 				845D29CE1FC1B5FE008B9FE7 /* SampleRequest.swift in Sources */,
 				845D29D21FC1B6CE008B9FE7 /* sampleData.swift in Sources */,
+				845D29DF1FC1CFFD008B9FE7 /* SampleModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
