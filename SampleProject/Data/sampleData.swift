@@ -12,7 +12,7 @@ import Result
 
 struct sampleData {
     
-    static func sample<Request: Sample>(request: Request, handler:@escaping (Result<Request.Response , SampleError>) -> ()){
+    static func sample<Request: Sample>(request: Request, handler:@escaping (Result<Request.Response , SessionTaskError>) -> ()){
         Session.send(request) { result in
             switch result {
             case .success(let response):
@@ -20,10 +20,11 @@ struct sampleData {
             
             case .failure(.responseError(let responseError as SampleError)):
                 print("response error: \(responseError)")
-                handler(.failure(responseError))
+                handler(.failure(.responseError(responseError)))
             
             case .failure(let error):
                 print("error: \(error)")
+                handler(.failure(error))
             }
         }
     }

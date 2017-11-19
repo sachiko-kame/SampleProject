@@ -40,14 +40,14 @@ class SampleModel: NSObject, UITableViewDelegate, UITableViewDataSource{
         return 50
     }
     
-    func data(handler:@escaping () -> ()){
+    func data(handler:@escaping (_ text:String) -> ()){
         sampleData.sample(request: SampleRequest()){ response in
             if(response.value != nil){
                 self.Items = [(response.value?.limit)!]
-                handler()
+                handler("成功")
             }else{
                 print("レスポンスに失敗")
-                handler()
+                handler("失敗")
             }
             
         }

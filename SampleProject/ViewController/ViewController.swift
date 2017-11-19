@@ -23,8 +23,10 @@ class ViewController: UIViewController {
     
     override func loadView() {
         self.view = SampleView(model: sampleModel)
-        sampleModel.data{
-            (self.view as! SampleView).tableView.reloadData()
+        sampleModel.data{ response in
+            if(response == "成功"){
+                (self.view as! SampleView).tableView.reloadData()
+            }
         }
     }
 
