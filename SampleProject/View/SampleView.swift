@@ -34,8 +34,4 @@ class SampleView: UIView {
         ErrorView.frame = self.frame
         tableView.frame = self.frame
     }
-    
-    func errorView(){
-        self.tableView.isHidden = true
-    }
 }

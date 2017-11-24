@@ -27,7 +27,7 @@ class ViewController: UIViewController {
             if(response == "成功"){
                 (self.view as! SampleView).tableView.reloadData()
             }else{
-                (self.view as! SampleView).errorView()
+                (self.view as! SampleView).tableView.isHidden = true
             }
         }
     }
