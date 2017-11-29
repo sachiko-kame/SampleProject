@@ -16,7 +16,7 @@ protocol Sample: Request {
 extension Sample {
     
     var baseURL: URL {
-        return URL(string: "https://api.github.com")!
+        return URL(string: "https://qiita.com")!
     }
     
     func intercept(object: Any, urlResponse: HTTPURLResponse) throws -> Any {

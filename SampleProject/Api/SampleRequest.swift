@@ -10,37 +10,38 @@ import UIKit
 import APIKit
 
 struct SampleRequest: Sample {
-    typealias Response = RateLimit
+    typealias Response = QiitaItem
     
     var method: HTTPMethod {
         return .get
     }
     
     var path: String {
-        return "/rate_limit"
+        return "/api/v2/items"
     }
     
-    func response(from object: Any, urlResponse: HTTPURLResponse) throws -> RateLimit {
-        return try RateLimit(object: object)
+    func response(from object: Any, urlResponse: HTTPURLResponse) throws -> QiitaItem {
+        return try QiitaItem(object: object)
     }
 }
 
-struct RateLimit {
-    let limit: Int
-    let remaining: Int
-    let resources:[String: Any]
+struct QiitaItem {
+    let QiitaArray:Array<[String:Any]>
     
     init(object: Any) throws {
-        guard let dictionary = object as? [String: Any],
-            let rateDictionary = dictionary["rate"] as? [String: Any],
-            let resources = dictionary["resources"] as? [String: Any],
-            let limit = rateDictionary["limit"] as? Int,
-            let remaining = rateDictionary["remaining"] as? Int else {
+        guard let DIctionary = object as? Array<[String:Any]> else {
                 throw ResponseError.unexpectedObject(object)
         }
         
-        self.limit = limit
-        self.remaining = remaining
-        self.resources = resources
+       self.QiitaArray = DIctionary
+    }
+}
+
+
+struct Qiita {
+    let title:String
+    
+    init(Item:[String:Any]){
+        self.title = Item["title"] as! String
     }
 }

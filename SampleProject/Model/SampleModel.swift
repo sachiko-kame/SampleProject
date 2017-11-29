@@ -10,7 +10,7 @@ import UIKit
 
 class SampleModel: NSObject, UITableViewDelegate, UITableViewDataSource{
 
-    private var Items: Array<Int> = []
+    private var Items: Array<String> = []
     
     //Cellの総数を返すデータソースメソッド.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,14 +42,21 @@ class SampleModel: NSObject, UITableViewDelegate, UITableViewDataSource{
     
     func data(handler:@escaping (_ text:String) -> ()){
         sampleData.sample(request: SampleRequest()){ response in
-            if(response.value != nil){
-                self.Items = [(response.value?.limit)!]
+            switch response{
+            case .success(let response):
+                
+                for item in response.QiitaArray{
+                    let Qiitaitem = Qiita(Item:item)
+                    self.Items.append(Qiitaitem.title)
+                }
                 handler("成功")
-            }else{
-                print("レスポンスに失敗")
-                handler("失敗")
+            case .failure(.responseError(let responseError)):
+                handler("失敗\(responseError.localizedDescription)")
+            case .failure(.connectionError(_)):
+                handler("通信失敗")
+            case .failure(.requestError(_)):
+                handler("とにかく失敗")
             }
-            
         }
     }
 }
