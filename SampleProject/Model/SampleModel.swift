@@ -10,7 +10,7 @@ import UIKit
 
 class SampleModel: NSObject, UITableViewDelegate, UITableViewDataSource{
 
-    private var Items: Array<String> = []
+    private var Items: Array<Qiita> = []
     
     //Cellの総数を返すデータソースメソッド.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -20,24 +20,23 @@ class SampleModel: NSObject, UITableViewDelegate, UITableViewDataSource{
     //タップされた時に呼ばれる
     func tableView(_ table: UITableView, didSelectRowAt indexPath:IndexPath) {
         table.deselectRow(at: indexPath, animated: true)
-        print("\(Items[indexPath.row])")
+        print("\(Items[indexPath.row].username)さんの記事")
     }
     
     //Cellに値を設定するデータソースメソッド.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath as IndexPath)
-        cell.textLabel?.textColor = UIColor.darkGray
-        cell.textLabel?.font = UIFont.systemFont(ofSize: 20)
-        cell.accessoryType = .disclosureIndicator
-        cell.textLabel!.text = "\(Items[indexPath.row])"
+        tableView.register(cellType: QiitaListTableViewCell.self)
+        tableView.register(cellTypes: [QiitaListTableViewCell.self, QiitaListTableViewCell.self])
         
+        let cell = tableView.dequeueReusableCell(with: QiitaListTableViewCell.self, for: indexPath)
+        cell.setCell(SetValue: self.Items[indexPath.row])
         return cell
     }
     
     //セルの高さを設定
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return QiitaListTableViewCell.height
     }
     
     func data(handler:@escaping (_ text:String) -> ()){
@@ -47,7 +46,7 @@ class SampleModel: NSObject, UITableViewDelegate, UITableViewDataSource{
                 
                 for item in response.QiitaArray{
                     let Qiitaitem = Qiita(Item:item)
-                    self.Items.append(Qiitaitem.title)
+                    self.Items.append(Qiitaitem)
                 }
                 handler("成功")
             case .failure(.responseError(let responseError)):
