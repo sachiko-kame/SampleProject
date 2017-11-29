@@ -20,6 +20,14 @@ struct SampleRequest: Sample {
         return "/api/v2/items"
     }
     
+    var parameters: [String: Any] {
+        
+        return [
+            "page": "1",
+            "per_page": "20"
+        ]
+    }
+    
     func response(from object: Any, urlResponse: HTTPURLResponse) throws -> QiitaItem {
         return try QiitaItem(object: object)
     }
