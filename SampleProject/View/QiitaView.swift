@@ -1,21 +1,24 @@
 //
-//  SampleView.swift
+//  QiitaView.swift
 //  SampleProject
 //
-//  Created by 水野祥子 on 2017/12/02.
+//  Created by 水野祥子 on 2017/11/19.
 //  Copyright © 2017年 sachiko. All rights reserved.
 //
 
 import UIKit
 
-class SampleView: UIView {
+class QiitaView: UIView {
     
     let tableView = UITableView()
-
+    let ErrorView = UIView()
+    
     //ここで入れたいものを入れる
-    required init(model: SampleModel) {
+    required init(model: QiitaModel) {
         super.init(frame: CGRect.zero);
+        self.addSubview(ErrorView)
         self.addSubview(tableView)
+        self.tableView.delegate = model
         self.tableView.dataSource = model
     }
     
@@ -26,7 +29,8 @@ class SampleView: UIView {
     //大きさの調節.Viewの操作を行う
     override func layoutSubviews() {
         super.layoutSubviews()
+        ErrorView.backgroundColor = UIColor.green
+        ErrorView.frame = self.frame
         tableView.frame = self.frame
     }
-
 }

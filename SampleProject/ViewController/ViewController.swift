@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UITableViewDelegate{
 
     let sampleModel = SampleModel()
     
@@ -23,13 +23,25 @@ class ViewController: UIViewController {
     
     override func loadView() {
         self.view = SampleView(model: sampleModel)
-        sampleModel.data{ response in
-            if(response == "成功"){
-                (self.view as! SampleView).tableView.reloadData()
-            }else{
-                (self.view as! SampleView).tableView.isHidden = true
-            }
+        (self.view as! SampleView).tableView.delegate   = self
+    }
+        
+    //タップされた時に呼ばれる
+    func tableView(_ table: UITableView, didSelectRowAt indexPath:IndexPath) {
+        table.deselectRow(at: indexPath, animated: true)
+        
+        switch indexPath.row {
+        case 0:
+            let qiitaViewController = QiitaViewController()
+            self.navigationController?.pushViewController(qiitaViewController, animated: true)
+        default:
+            print("🌼")
         }
+    }
+    
+    //セルの高さを設定
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
     }
 
 
