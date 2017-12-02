@@ -36,7 +36,6 @@ class QiitaModel: NSObject, UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return QiitaListTableViewCell.height
     }
-    
     func data(handler:@escaping (_ text:String) -> ()){
         sampleData.sample(request: SampleRequest()){ response in
             switch response{
@@ -48,7 +47,7 @@ class QiitaModel: NSObject, UITableViewDelegate, UITableViewDataSource{
                 }
                 handler("成功")
             case .failure(.responseError(let responseError)):
-                handler("失敗\(responseError.localizedDescription)")
+                handler("サーバーの通信による失敗")
             case .failure(.connectionError(_)):
                 handler("通信失敗")
             case .failure(.requestError(_)):

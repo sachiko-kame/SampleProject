@@ -29,6 +29,7 @@ class QiitaViewController: UIViewController {
                 (self.view as! QiitaView).tableView.reloadData()
             }else{
                 (self.view as! QiitaView).loadView?.removeFromSuperview()
+                (self.view as! QiitaView).errorView?.CauseLabel.text = response
                 (self.view as! QiitaView).tableView.isHidden = true
             }
         }
