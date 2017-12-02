@@ -25,8 +25,10 @@ class QiitaViewController: UIViewController {
         self.view = QiitaView(model: qiitaModel)
         qiitaModel.data{ response in
             if(response == "成功"){
+                (self.view as! QiitaView).loadView?.removeFromSuperview()
                 (self.view as! QiitaView).tableView.reloadData()
             }else{
+                (self.view as! QiitaView).loadView?.removeFromSuperview()
                 (self.view as! QiitaView).tableView.isHidden = true
             }
         }

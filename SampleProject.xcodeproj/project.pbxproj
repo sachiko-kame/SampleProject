@@ -13,6 +13,8 @@
 		8440527B1FD2F22200791B53 /* QiitaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844052791FD2F22200791B53 /* QiitaViewController.xib */; };
 		8440527D1FD2F34500791B53 /* SampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440527C1FD2F34500791B53 /* SampleModel.swift */; };
 		8440527F1FD2F50100791B53 /* SampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440527E1FD2F50100791B53 /* SampleView.swift */; };
+		844052831FD3001200791B53 /* loaddingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844052821FD3001200791B53 /* loaddingView.swift */; };
+		844052851FD3001B00791B53 /* loaddingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844052841FD3001B00791B53 /* loaddingView.xib */; };
 		8452F67C1FCF015E00A6CAB7 /* QiitaListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452F67A1FCF015E00A6CAB7 /* QiitaListTableViewCell.swift */; };
 		8452F67D1FCF015E00A6CAB7 /* QiitaListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8452F67B1FCF015E00A6CAB7 /* QiitaListTableViewCell.xib */; };
 		8452F67F1FCF03E300A6CAB7 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452F67E1FCF03E200A6CAB7 /* UITableViewExtension.swift */; };
@@ -62,6 +64,8 @@
 		844052791FD2F22200791B53 /* QiitaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QiitaViewController.xib; sourceTree = "<group>"; };
 		8440527C1FD2F34500791B53 /* SampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleModel.swift; sourceTree = "<group>"; };
 		8440527E1FD2F50100791B53 /* SampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleView.swift; sourceTree = "<group>"; };
+		844052821FD3001200791B53 /* loaddingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loaddingView.swift; sourceTree = "<group>"; };
+		844052841FD3001B00791B53 /* loaddingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = loaddingView.xib; sourceTree = "<group>"; };
 		8452F67A1FCF015E00A6CAB7 /* QiitaListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaListTableViewCell.swift; sourceTree = "<group>"; };
 		8452F67B1FCF015E00A6CAB7 /* QiitaListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QiitaListTableViewCell.xib; sourceTree = "<group>"; };
 		8452F67E1FCF03E200A6CAB7 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
@@ -134,11 +138,30 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		8452F6791FCF013600A6CAB7 /* Parts */ = {
+		844052801FD2FFE200791B53 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
 				8452F67A1FCF015E00A6CAB7 /* QiitaListTableViewCell.swift */,
 				8452F67B1FCF015E00A6CAB7 /* QiitaListTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		844052811FD2FFFC00791B53 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				844052821FD3001200791B53 /* loaddingView.swift */,
+				844052841FD3001B00791B53 /* loaddingView.xib */,
+			);
+			name = View;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		8452F6791FCF013600A6CAB7 /* Parts */ = {
+			isa = PBXGroup;
+			children = (
+				844052811FD2FFFC00791B53 /* View */,
+				844052801FD2FFE200791B53 /* Cell */,
 			);
 			path = Parts;
 			sourceTree = "<group>";
@@ -387,6 +410,7 @@
 			files = (
 				845D29AA1FC1B4B6008B9FE7 /* LaunchScreen.storyboard in Resources */,
 				845D29A71FC1B4B6008B9FE7 /* Assets.xcassets in Resources */,
+				844052851FD3001B00791B53 /* loaddingView.xib in Resources */,
 				8452F67D1FCF015E00A6CAB7 /* QiitaListTableViewCell.xib in Resources */,
 				8440527B1FD2F22200791B53 /* QiitaViewController.xib in Resources */,
 				845D29A51FC1B4B6008B9FE7 /* Main.storyboard in Resources */,
@@ -581,6 +605,7 @@
 				845D29E21FC1D144008B9FE7 /* UIColorExtension.swift in Sources */,
 				845D29CE1FC1B5FE008B9FE7 /* SampleRequest.swift in Sources */,
 				845D29D21FC1B6CE008B9FE7 /* sampleData.swift in Sources */,
+				844052831FD3001200791B53 /* loaddingView.swift in Sources */,
 				845D29DF1FC1CFFD008B9FE7 /* QiitaModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,12 +12,18 @@ class QiitaView: UIView {
     
     let tableView = UITableView()
     let ErrorView = UIView()
+    var loadView:loaddingView?
     
     //ここで入れたいものを入れる
     required init(model: QiitaModel) {
         super.init(frame: CGRect.zero);
+
+        loadView = Bundle.main.loadNibNamed("loaddingView", owner: self, options: nil)!.first! as? loaddingView
+        loadView?.IndicatorView.startAnimating()
+          
         self.addSubview(ErrorView)
         self.addSubview(tableView)
+        self.addSubview(loadView!)
         self.tableView.delegate = model
         self.tableView.dataSource = model
     }
@@ -30,6 +36,7 @@ class QiitaView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         ErrorView.backgroundColor = UIColor.green
+        loadView?.frame = self.frame
         ErrorView.frame = self.frame
         tableView.frame = self.frame
     }
