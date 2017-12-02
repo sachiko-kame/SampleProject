@@ -11,17 +11,19 @@ import UIKit
 class QiitaView: UIView {
     
     let tableView = UITableView()
-    let ErrorView = UIView()
+    var errorView:ErrorView?
     var loadView:loaddingView?
     
     //ここで入れたいものを入れる
     required init(model: QiitaModel) {
         super.init(frame: CGRect.zero);
-
+        
+        errorView = Bundle.main.loadNibNamed("ErrorView", owner: self, options: nil)!.first! as? ErrorView
+        
         loadView = Bundle.main.loadNibNamed("loaddingView", owner: self, options: nil)!.first! as? loaddingView
         loadView?.IndicatorView.startAnimating()
           
-        self.addSubview(ErrorView)
+        self.addSubview(errorView!)
         self.addSubview(tableView)
         self.addSubview(loadView!)
         self.tableView.delegate = model
@@ -35,9 +37,8 @@ class QiitaView: UIView {
     //大きさの調節.Viewの操作を行う
     override func layoutSubviews() {
         super.layoutSubviews()
-        ErrorView.backgroundColor = UIColor.green
         loadView?.frame = self.frame
-        ErrorView.frame = self.frame
+        errorView?.frame = self.frame
         tableView.frame = self.frame
     }
 }
