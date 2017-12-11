@@ -29,6 +29,7 @@ class QiitaListTableViewCell: UITableViewCell {
     func setCell(SetValue:Qiita){
         self.Title.text = SetValue.title
         self.url.text = SetValue.url
+        self.url.attributedText = self.attribute(text:SetValue.url)
     
         let imgURL = URL(string: SetValue.profile_image_url)!
         let session = URLSession(configuration: .default)

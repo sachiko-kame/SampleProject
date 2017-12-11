@@ -16,5 +16,16 @@ extension NSObject {
     var className: String {
         return type(of: self).className
     }
+    
+    func attribute(text:String) -> NSAttributedString? {
+        
+        let stringAttributes: [NSAttributedStringKey : Any] = [
+            .foregroundColor : UIColor.blue,
+            .font : UIFont.systemFont(ofSize: 13.0),
+            .kern:2.0
+        ]
+        let string = NSAttributedString(string: text, attributes:stringAttributes)
+        return string
+    }
 }
 
