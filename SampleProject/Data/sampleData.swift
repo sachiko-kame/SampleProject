@@ -13,7 +13,7 @@ import Result
 struct sampleData {
     
     static func sample<Request: Sample>(request: Request, handler:@escaping (Result<Request.Response , SessionTaskError>) -> ()){
-        Session.send(request) { result in
+        Session.send(SampleRequestManager(request:request)) { result in
             switch result {
             case .success(let response):
                 handler(.success(response))

@@ -46,12 +46,14 @@ class QiitaModel: NSObject, UITableViewDelegate, UITableViewDataSource{
                     self.Items.append(Qiitaitem)
                 }
                 handler("成功")
-            case .failure(.responseError(let responseError)):
-                handler("サーバーの通信による失敗")
+            case .failure(.responseError(let responseError as SampleError)):
+                handler("サーバーの通信による失敗\(responseError)")
             case .failure(.connectionError(_)):
                 handler("通信失敗")
             case .failure(.requestError(_)):
                 handler("とにかく失敗")
+            case .failure( _):
+                print("エラー")
             }
         }
     }

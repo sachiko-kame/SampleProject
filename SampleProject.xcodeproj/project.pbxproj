@@ -156,8 +156,8 @@
 			children = (
 				844052821FD3001200791B53 /* loaddingView.swift */,
 				844052841FD3001B00791B53 /* loaddingView.xib */,
-				844052861FD303DC00791B53 /* ErrorView.xib */,
 				844052881FD303E500791B53 /* ErrorView.swift */,
+				844052861FD303DC00791B53 /* ErrorView.xib */,
 			);
 			name = View;
 			path = "New Group";
