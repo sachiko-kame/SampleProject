@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QiitaViewController: UIViewController {
+class QiitaViewController: UIViewController,UITableViewDelegate {
 
     let qiitaModel = QiitaModel()
     
@@ -23,6 +23,7 @@ class QiitaViewController: UIViewController {
 
     override func loadView() {
         self.view = QiitaView(model: qiitaModel)
+        (self.view as! QiitaView).tableView.delegate = self
         qiitaModel.data{ response in
             if(response == "成功"){
                 (self.view as! QiitaView).loadView?.removeFromSuperview()
@@ -33,5 +34,9 @@ class QiitaViewController: UIViewController {
                 (self.view as! QiitaView).tableView.isHidden = true
             }
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.navigationController?.pushViewController(QiitaDetileViewController(Item:qiitaModel.geItems(indexPath: indexPath as NSIndexPath)), animated: true)
     }
 }

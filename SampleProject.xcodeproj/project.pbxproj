@@ -36,6 +36,8 @@
 		845D29DF1FC1CFFD008B9FE7 /* QiitaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D29DE1FC1CFFD008B9FE7 /* QiitaModel.swift */; };
 		845D29E21FC1D144008B9FE7 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D29E11FC1D144008B9FE7 /* UIColorExtension.swift */; };
 		845D29E41FC1D16F008B9FE7 /* CGRectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D29E31FC1D16F008B9FE7 /* CGRectExtension.swift */; };
+		84F6978D1FDEBC5800EC8CA8 /* QiitaDetileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F6978B1FDEBC5800EC8CA8 /* QiitaDetileViewController.swift */; };
+		84F6978E1FDEBC5800EC8CA8 /* QiitaDetileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84F6978C1FDEBC5800EC8CA8 /* QiitaDetileViewController.xib */; };
 		97672ADA3B5BCE2ED67A548B /* Pods_SampleProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62EEBA96DA5EC3B29000247B /* Pods_SampleProjectUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +97,8 @@
 		845D29DE1FC1CFFD008B9FE7 /* QiitaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaModel.swift; sourceTree = "<group>"; };
 		845D29E11FC1D144008B9FE7 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		845D29E31FC1D16F008B9FE7 /* CGRectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectExtension.swift; sourceTree = "<group>"; };
+		84F6978B1FDEBC5800EC8CA8 /* QiitaDetileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaDetileViewController.swift; sourceTree = "<group>"; };
+		84F6978C1FDEBC5800EC8CA8 /* QiitaDetileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QiitaDetileViewController.xib; sourceTree = "<group>"; };
 		8C1179BA4224B04E7FBD5D92 /* Pods-SampleProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleProjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SampleProjectUITests/Pods-SampleProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AEA09FC292930B9AAE23B09D /* Pods-SampleProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SampleProjectTests/Pods-SampleProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		E144C7AA295C5FCFD88942B6 /* Pods-SampleProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SampleProject/Pods-SampleProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -255,6 +259,8 @@
 				845D29A11FC1B4B6008B9FE7 /* ViewController.swift */,
 				844052781FD2F22200791B53 /* QiitaViewController.swift */,
 				844052791FD2F22200791B53 /* QiitaViewController.xib */,
+				84F6978B1FDEBC5800EC8CA8 /* QiitaDetileViewController.swift */,
+				84F6978C1FDEBC5800EC8CA8 /* QiitaDetileViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -418,6 +424,7 @@
 				845D29A71FC1B4B6008B9FE7 /* Assets.xcassets in Resources */,
 				844052851FD3001B00791B53 /* loaddingView.xib in Resources */,
 				8452F67D1FCF015E00A6CAB7 /* QiitaListTableViewCell.xib in Resources */,
+				84F6978E1FDEBC5800EC8CA8 /* QiitaDetileViewController.xib in Resources */,
 				844052871FD303DC00791B53 /* ErrorView.xib in Resources */,
 				8440527B1FD2F22200791B53 /* QiitaViewController.xib in Resources */,
 				845D29A51FC1B4B6008B9FE7 /* Main.storyboard in Resources */,
@@ -601,6 +608,7 @@
 				8440527D1FD2F34500791B53 /* SampleModel.swift in Sources */,
 				845D29D41FC1BB9F008B9FE7 /* BaseRequest.swift in Sources */,
 				845D29A21FC1B4B6008B9FE7 /* ViewController.swift in Sources */,
+				84F6978D1FDEBC5800EC8CA8 /* QiitaDetileViewController.swift in Sources */,
 				8452F67C1FCF015E00A6CAB7 /* QiitaListTableViewCell.swift in Sources */,
 				8452F67F1FCF03E300A6CAB7 /* UITableViewExtension.swift in Sources */,
 				8440527A1FD2F22200791B53 /* QiitaViewController.swift in Sources */,

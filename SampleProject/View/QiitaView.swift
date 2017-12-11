@@ -26,7 +26,6 @@ class QiitaView: UIView {
         self.addSubview(errorView!)
         self.addSubview(tableView)
         self.addSubview(loadView!)
-        self.tableView.delegate = model
         self.tableView.dataSource = model
     }
     

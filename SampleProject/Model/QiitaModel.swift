@@ -8,19 +8,13 @@
 
 import UIKit
 
-class QiitaModel: NSObject, UITableViewDelegate, UITableViewDataSource{
+class QiitaModel: NSObject, UITableViewDataSource{
 
     private var Items: Array<Qiita> = []
     
     //Cellの総数を返すデータソースメソッド.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Items.count
-    }
-    
-    //タップされた時に呼ばれる
-    func tableView(_ table: UITableView, didSelectRowAt indexPath:IndexPath) {
-        table.deselectRow(at: indexPath, animated: true)
-        print("\(Items[indexPath.row].username)さんの記事")
     }
     
     //Cellに値を設定するデータソースメソッド.
@@ -56,5 +50,9 @@ class QiitaModel: NSObject, UITableViewDelegate, UITableViewDataSource{
                 print("エラー")
             }
         }
+    }
+    
+    func geItems(indexPath: NSIndexPath) -> Qiita{
+        return Items[indexPath.row]
     }
 }
