@@ -56,6 +56,7 @@ struct Qiita {
     let user:[String:Any]
     let username:String
     let profile_image_url:String
+    let id:String
     
     init(Item:[String:Any]){
         self.title = Item["title"] as! String
@@ -67,6 +68,7 @@ struct Qiita {
         self.user = Item["user"] as! [String:Any]
         self.username = self.user["name"] as! String
         self.profile_image_url = self.user["profile_image_url"] as! String
+        self.id = Item["id"] as! String
  
     }
 }

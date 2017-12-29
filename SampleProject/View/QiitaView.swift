@@ -18,9 +18,9 @@ class QiitaView: UIView {
     required init(model: QiitaModel) {
         super.init(frame: CGRect.zero);
         
-        errorView = Bundle.main.loadNibNamed("ErrorView", owner: self, options: nil)!.first! as? ErrorView
+        errorView = Criate(ErrorView.self)
+        loadView = Criate(loaddingView.self)
         
-        loadView = Bundle.main.loadNibNamed("loaddingView", owner: self, options: nil)!.first! as? loaddingView
         loadView?.IndicatorView.startAnimating()
           
         self.addSubview(errorView!)

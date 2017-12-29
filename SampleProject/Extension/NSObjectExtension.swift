@@ -27,5 +27,11 @@ extension NSObject {
         let string = NSAttributedString(string: text, attributes:stringAttributes)
         return string
     }
+    
+    func Criate<T:UIView>(_ name:T.Type) -> T{
+        let className = name.className
+        let View = Bundle.main.loadNibNamed(className, owner: self, options: nil)!.first!
+        return View as! T
+    }
 }
 
