@@ -148,6 +148,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8439BF551FF7671600362B58 /* get */ = {
+			isa = PBXGroup;
+			children = (
+				845D29CD1FC1B5FE008B9FE7 /* SampleRequest.swift */,
+				84562EEA1FF6A14400A0DCD4 /* QiitaDetileRequest.swift */,
+			);
+			path = get;
+			sourceTree = "<group>";
+		};
 		844052801FD2FFE200791B53 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,8 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				845D29D31FC1BB9F008B9FE7 /* BaseRequest.swift */,
-				845D29CD1FC1B5FE008B9FE7 /* SampleRequest.swift */,
-				84562EEA1FF6A14400A0DCD4 /* QiitaDetileRequest.swift */,
+				8439BF551FF7671600362B58 /* get */,
 			);
 			path = Api;
 			sourceTree = "<group>";
