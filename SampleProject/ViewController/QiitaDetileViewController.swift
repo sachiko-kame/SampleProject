@@ -24,6 +24,10 @@ class QiitaDetileViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //キーボード編集不可
+        qiitaTextView.isEditable = false
+        urlTextView.isEditable = false
+        
         sampleData.sample(request: QiitaDetileRequest(ID:(self.qiitaItem?.id)!)){ response in
             switch response{
             case .success(let response):
