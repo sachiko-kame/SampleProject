@@ -15,6 +15,7 @@ class SampleView: UIView {
     //ここで入れたいものを入れる
     required init(model: SampleModel) {
         super.init(frame: CGRect.zero);
+        tableView.accessibilityHint = "sampletatable"
         self.addSubview(tableView)
         self.tableView.dataSource = model
     }
