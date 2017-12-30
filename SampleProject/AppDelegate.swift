@@ -7,16 +7,36 @@
 //
 
 import UIKit
+import OHHTTPStubs
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     weak var nc: UINavigationController?
+    var a:String?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    
+        
+        let jsonObj = ["Name":"Taro"]
+        
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: jsonObj, options: [])
+            let jsonStr = String(bytes: jsonData, encoding: .utf8)!
+            self.a = jsonStr
+            print(jsonStr)  // 生成されたJSON文字列 => {"Name":"Taro"}
+        } catch let error {
+            print(error)
+        }
+        
+        stub(condition:/*isScheme("https") && */isHost("mywebservice.com")) { _ in
+//            let obj = ["key1":"value1", "key2":""] as Any
+//            let Data:NSData = NSKeyedArchiver.archivedData(withRootObject:obj) as NSData
+            let stubData = self.a?.data(using: .utf8)
+            return OHHTTPStubsResponse(data: stubData as! Data, statusCode:200, headers:nil)
+        }
+        
         nc = UINavigationController(rootViewController: ViewController())
         self.window?.rootViewController = nc
         
