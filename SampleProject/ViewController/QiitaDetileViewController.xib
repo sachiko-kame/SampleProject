@@ -47,13 +47,13 @@
                                 <constraint firstAttribute="height" constant="100" id="1qy-ow-obO"/>
                             </constraints>
                         </imageView>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rU4-ZC-faL">
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Please wait..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rU4-ZC-faL">
                             <rect key="frame" x="0.0" y="180" width="315" height="342"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZZb-27-TLO">
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Please wait..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZZb-27-TLO">
                             <rect key="frame" x="0.0" y="537" width="315" height="50"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
