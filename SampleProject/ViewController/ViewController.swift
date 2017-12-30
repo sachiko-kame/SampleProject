@@ -35,7 +35,8 @@ class ViewController: UIViewController,UITableViewDelegate{
             let qiitaViewController = QiitaViewController()
             self.navigationController?.pushViewController(qiitaViewController, animated: true)
         default:
-            print("🌼")
+            let orignalViewController = OrignalViewController()
+            self.navigationController?.pushViewController(orignalViewController, animated: true)
         }
     }
     

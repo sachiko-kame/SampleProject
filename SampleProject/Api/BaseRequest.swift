@@ -85,8 +85,8 @@ struct SampleError: Error {
     init(object: Any, code:Int) {
         let dictionary = object as? [String: Any]
         self.statusCode = code
-        self.type = dictionary!["type"] as! String
-        self.message = dictionary!["message"] as! String
+        self.type = dictionary!["type"] as? String ?? ""
+        self.message = dictionary!["message"] as? String ?? ""
     
     }
 }

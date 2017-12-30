@@ -10,7 +10,7 @@ import UIKit
 
 class SampleModel: NSObject, UITableViewDataSource {
 
-    private var Items: Array<String> = ["qiita", "other"]
+    private var Items: Array<String> = ["qiita", "OrignalRequest"]
     
     //Cellの総数を返すデータソースメソッド.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
