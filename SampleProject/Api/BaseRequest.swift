@@ -43,9 +43,10 @@ struct SampleRequestManager<_Request:Sample>:Request{
         self.request = request
     }
     
-//    var headerFields: [String: String]{
+    var headerFields: [String: String]{
 //        return ["Authorization":"??? 123"]
-//    }
+        return self.request.headerFields
+    }
     
     var baseURL: URL{
         return self.request.baseURL
