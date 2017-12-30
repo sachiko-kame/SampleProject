@@ -32,13 +32,21 @@ class StubClass: NSObject {
     func stubMake2(){
         stub(condition:isHost("myweb.com")) { _ in
             let obj = ["おはようございます"]
-            return OHHTTPStubsResponse(data: self.jsonData(object:obj)!, statusCode:200, headers:nil)
+            return OHHTTPStubsResponse(data: self.jsonData(object:obj)!, statusCode:200, headers:nil).requestTime(1.0, responseTime: 3.0)
+        }
+    }
+    
+    func stubMake3(){
+        stub(condition:isHost("my.com")) { _ in
+            let obj = ["type":"typeはエラー🐣", "message":"これはstubのエラーメッセージです！"] as Any
+            return OHHTTPStubsResponse(data: self.jsonData(object:obj)!, statusCode:400, headers:nil)
         }
     }
     
     func Allmake(){
         self.stubMake1()
         self.stubMake2()
+        self.stubMake3()
     }
    
 }
