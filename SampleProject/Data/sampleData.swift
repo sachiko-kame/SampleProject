@@ -29,5 +29,9 @@ struct sampleData {
             }
         }
     }
+    
+    static func sam() -> Int{
+        return 5 + 2
+    }
 }
 
