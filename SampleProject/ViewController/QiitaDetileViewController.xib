@@ -9,9 +9,15 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HiraginoKakuGothic.ttc">
+            <string>HiraginoSans-W6</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QiitaDetileViewController" customModule="SampleProject" customModuleProvider="target">
             <connections>
+                <outlet property="UserNameLabel" destination="1gl-v0-EhR" id="qh8-ZJ-gaW"/>
                 <outlet property="qiitaImage" destination="B0h-Yl-Ymp" id="xsw-Vb-wls"/>
                 <outlet property="qiitaTextView" destination="rU4-ZC-faL" id="d15-zd-Loc"/>
                 <outlet property="urlTextView" destination="ZZb-27-TLO" id="0qG-Sp-eSq"/>
@@ -26,14 +32,23 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Pem-EB-fpA">
                     <rect key="frame" x="30" y="30" width="315" height="587"/>
                     <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gl-v0-EhR">
+                            <rect key="frame" x="0.0" y="0.0" width="315" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="isq-wX-VLf"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="24"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B0h-Yl-Ymp">
-                            <rect key="frame" x="0.0" y="0.0" width="315" height="100"/>
+                            <rect key="frame" x="0.0" y="65" width="315" height="100"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="100" id="1qy-ow-obO"/>
                             </constraints>
                         </imageView>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rU4-ZC-faL">
-                            <rect key="frame" x="0.0" y="115" width="315" height="407"/>
+                            <rect key="frame" x="0.0" y="180" width="315" height="342"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

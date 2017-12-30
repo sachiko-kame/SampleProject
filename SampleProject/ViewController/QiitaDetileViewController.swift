@@ -14,7 +14,7 @@ class QiitaDetileViewController: UIViewController{
     @IBOutlet weak var qiitaImage: UIImageView!
     @IBOutlet weak var qiitaTextView: UITextView!
     @IBOutlet weak var urlTextView: UITextView!
-    
+    @IBOutlet weak var UserNameLabel: UILabel!
     
     convenience init(Item:Qiita) {
         self.init()
@@ -51,6 +51,9 @@ class QiitaDetileViewController: UIViewController{
     }
     
     func qiitaViewMake(response:QiitaDetileitem){
+        UserNameLabel.text = response.user["id"] as? String
+        UserNameLabel.adjustsFontSizeToFitWidth = true
+        
         let imgURL = URL(string: response.userimage)!
         let session = URLSession(configuration: .default)
         let download = session.dataTask(with: imgURL) { (data, response, error) in
