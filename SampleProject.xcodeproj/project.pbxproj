@@ -21,6 +21,7 @@
 		8452F67D1FCF015E00A6CAB7 /* QiitaListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8452F67B1FCF015E00A6CAB7 /* QiitaListTableViewCell.xib */; };
 		8452F67F1FCF03E300A6CAB7 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452F67E1FCF03E200A6CAB7 /* UITableViewExtension.swift */; };
 		8452F6811FCF042000A6CAB7 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452F6801FCF042000A6CAB7 /* NSObjectExtension.swift */; };
+		84562EEB1FF6A14400A0DCD4 /* QiitaDetileRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84562EEA1FF6A14400A0DCD4 /* QiitaDetileRequest.swift */; };
 		845D29A01FC1B4B6008B9FE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D299F1FC1B4B6008B9FE7 /* AppDelegate.swift */; };
 		845D29A21FC1B4B6008B9FE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D29A11FC1B4B6008B9FE7 /* ViewController.swift */; };
 		845D29A51FC1B4B6008B9FE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845D29A31FC1B4B6008B9FE7 /* Main.storyboard */; };
@@ -76,6 +77,7 @@
 		8452F67B1FCF015E00A6CAB7 /* QiitaListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QiitaListTableViewCell.xib; sourceTree = "<group>"; };
 		8452F67E1FCF03E200A6CAB7 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		8452F6801FCF042000A6CAB7 /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
+		84562EEA1FF6A14400A0DCD4 /* QiitaDetileRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaDetileRequest.swift; sourceTree = "<group>"; };
 		845D299C1FC1B4B6008B9FE7 /* SampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		845D299F1FC1B4B6008B9FE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		845D29A11FC1B4B6008B9FE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -207,8 +209,8 @@
 				845D29D91FC1CF67008B9FE7 /* ViewController */,
 				845D29DA1FC1CFA8008B9FE7 /* View */,
 				845D29DD1FC1CFE2008B9FE7 /* Model */,
-				845D29CF1FC1B69D008B9FE7 /* Api */,
 				845D29D01FC1B6B4008B9FE7 /* Data */,
+				845D29CF1FC1B69D008B9FE7 /* Api */,
 				845D29E01FC1D122008B9FE7 /* Extension */,
 				8452F6791FCF013600A6CAB7 /* Parts */,
 				845D29A61FC1B4B6008B9FE7 /* Assets.xcassets */,
@@ -241,6 +243,7 @@
 			children = (
 				845D29D31FC1BB9F008B9FE7 /* BaseRequest.swift */,
 				845D29CD1FC1B5FE008B9FE7 /* SampleRequest.swift */,
+				84562EEA1FF6A14400A0DCD4 /* QiitaDetileRequest.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -617,6 +620,7 @@
 				8440527F1FD2F50100791B53 /* SampleView.swift in Sources */,
 				845D29D81FC1CF39008B9FE7 /* Basic.swift in Sources */,
 				845D29A01FC1B4B6008B9FE7 /* AppDelegate.swift in Sources */,
+				84562EEB1FF6A14400A0DCD4 /* QiitaDetileRequest.swift in Sources */,
 				845D29E41FC1D16F008B9FE7 /* CGRectExtension.swift in Sources */,
 				845D29E21FC1D144008B9FE7 /* UIColorExtension.swift in Sources */,
 				845D29CE1FC1B5FE008B9FE7 /* SampleRequest.swift in Sources */,
