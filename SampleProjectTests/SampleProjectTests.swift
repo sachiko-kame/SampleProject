@@ -8,8 +8,15 @@
 
 import XCTest
 @testable import SampleProject
-
+//https://qiita.com/hmhmsh/items/a0289263b8ed2e1f808f
+//https://qiita.com/shirochan/items/10271912289dc563cc36
 class SampleProjectTests: XCTestCase {
+    
+    func testMySample() {
+        let Sample = sampleData.sam()
+        XCTAssertEqual(Sample, 7)
+        
+    }
     
     override func setUp() {
         super.setUp()

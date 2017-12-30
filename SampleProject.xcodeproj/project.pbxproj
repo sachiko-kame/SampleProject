@@ -13,7 +13,6 @@
 		8439BF5A1FF7732400362B58 /* OrignalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439BF581FF7732400362B58 /* OrignalViewController.swift */; };
 		8439BF5B1FF7732400362B58 /* OrignalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8439BF591FF7732400362B58 /* OrignalViewController.xib */; };
 		8439BF5E1FF7B3FA00362B58 /* StubClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439BF5D1FF7B3FA00362B58 /* StubClass.swift */; };
-		8439BF611FF7C2C100362B58 /* SampleTestClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439BF601FF7C2C100362B58 /* SampleTestClass.swift */; };
 		8440527A1FD2F22200791B53 /* QiitaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844052781FD2F22200791B53 /* QiitaViewController.swift */; };
 		8440527B1FD2F22200791B53 /* QiitaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844052791FD2F22200791B53 /* QiitaViewController.xib */; };
 		8440527D1FD2F34500791B53 /* SampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440527C1FD2F34500791B53 /* SampleModel.swift */; };
@@ -74,7 +73,6 @@
 		8439BF581FF7732400362B58 /* OrignalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrignalViewController.swift; sourceTree = "<group>"; };
 		8439BF591FF7732400362B58 /* OrignalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrignalViewController.xib; sourceTree = "<group>"; };
 		8439BF5D1FF7B3FA00362B58 /* StubClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubClass.swift; sourceTree = "<group>"; };
-		8439BF601FF7C2C100362B58 /* SampleTestClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTestClass.swift; sourceTree = "<group>"; };
 		844052781FD2F22200791B53 /* QiitaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaViewController.swift; sourceTree = "<group>"; };
 		844052791FD2F22200791B53 /* QiitaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QiitaViewController.xib; sourceTree = "<group>"; };
 		8440527C1FD2F34500791B53 /* SampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleModel.swift; sourceTree = "<group>"; };
@@ -176,14 +174,6 @@
 			path = Stub;
 			sourceTree = "<group>";
 		};
-		8439BF5F1FF7C28500362B58 /* TestGroup */ = {
-			isa = PBXGroup;
-			children = (
-				8439BF601FF7C2C100362B58 /* SampleTestClass.swift */,
-			);
-			path = TestGroup;
-			sourceTree = "<group>";
-		};
 		844052801FD2FFE200791B53 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,7 +239,6 @@
 				845D29CF1FC1B69D008B9FE7 /* Api */,
 				845D29E01FC1D122008B9FE7 /* Extension */,
 				8452F6791FCF013600A6CAB7 /* Parts */,
-				8439BF5F1FF7C28500362B58 /* TestGroup */,
 				8439BF5C1FF7B3D400362B58 /* Stub */,
 				845D29A61FC1B4B6008B9FE7 /* Assets.xcassets */,
 				845D29A81FC1B4B6008B9FE7 /* LaunchScreen.storyboard */,
@@ -686,7 +675,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8439BF611FF7C2C100362B58 /* SampleTestClass.swift in Sources */,
 				845D29B51FC1B4B6008B9FE7 /* SampleProjectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
