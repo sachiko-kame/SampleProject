@@ -24,40 +24,38 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Pem-EB-fpA">
-                    <rect key="frame" x="30" y="70" width="315" height="468"/>
+                    <rect key="frame" x="30" y="30" width="315" height="587"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B0h-Yl-Ymp">
-                            <rect key="frame" x="0.0" y="0.0" width="315" height="128"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B0h-Yl-Ymp">
+                            <rect key="frame" x="0.0" y="0.0" width="315" height="100"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="128" id="1qy-ow-obO"/>
+                                <constraint firstAttribute="height" constant="100" id="1qy-ow-obO"/>
                             </constraints>
                         </imageView>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rU4-ZC-faL">
-                            <rect key="frame" x="0.0" y="143" width="315" height="182"/>
+                            <rect key="frame" x="0.0" y="115" width="315" height="407"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZZb-27-TLO">
-                            <rect key="frame" x="0.0" y="340" width="315" height="128"/>
+                            <rect key="frame" x="0.0" y="537" width="315" height="50"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="KnI-jC-z89"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
                     </subviews>
-                    <constraints>
-                        <constraint firstItem="rU4-ZC-faL" firstAttribute="centerY" secondItem="Pem-EB-fpA" secondAttribute="centerY" id="CIX-9o-dqr"/>
-                    </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Pem-EB-fpA" secondAttribute="trailing" constant="30" id="Hd3-rI-JLI"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Pem-EB-fpA" secondAttribute="bottom" constant="129" id="MXm-fQ-af5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Pem-EB-fpA" secondAttribute="bottom" constant="50" id="MXm-fQ-af5"/>
                 <constraint firstItem="Pem-EB-fpA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="dt6-EP-bTY"/>
-                <constraint firstItem="Pem-EB-fpA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="hWA-Da-PHr"/>
+                <constraint firstItem="Pem-EB-fpA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="hWA-Da-PHr"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="34.5" y="71.5"/>
