@@ -8,19 +8,33 @@
 
 import UIKit
 
-class OrignalViewController: UIViewController, UITextFieldDelegate {
+class OrignalViewController: UIViewController, UITextFieldDelegate{
     
     var Method:Int = 0
 
+    @IBOutlet weak var showchange: NSLayoutConstraint!
     @IBOutlet weak var BaseURlTextField: UITextField!
     @IBOutlet weak var PathTextField: UITextField!
     @IBOutlet weak var MethodsegmentsControl: UISegmentedControl!
     
     @IBOutlet weak var ResponseShowTextView: UITextView!
+    
+    @IBOutlet weak var showButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         BaseURlTextField.delegate = self
         PathTextField.delegate = self
+        ResponseShowTextView.isEditable = false
+        
+//        let kbToolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 40))
+//        kbToolBar.barStyle = UIBarStyle.default
+//        kbToolBar.sizeToFit()
+//        // 閉じるボタン
+//        let commitButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(buttonTap(sender:)))
+//
+//        kbToolBar.items = [commitButton]
+//        ResponseShowTextView.inputAccessoryView = kbToolBar
 
     }
 
@@ -32,6 +46,10 @@ class OrignalViewController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+
+//    @objc func buttonTap(sender: UIButton) {
+//        self.view.endEditing(true)
+//    }
     
     @IBAction func BaseURlSampleTap(_ sender: Any) {
         BaseURlTextField.text = "https://qiita.com"
@@ -70,5 +88,8 @@ class OrignalViewController: UIViewController, UITextFieldDelegate {
         default:
             Method = 1
         }
+    }
+    @IBAction func showchangeTap(_ sender: Any) {
+        showchange.constant = showchange.constant == 10 ? showchange.constant - showButton.frame.origin.y + showButton.frame.size.height : 10
     }
 }

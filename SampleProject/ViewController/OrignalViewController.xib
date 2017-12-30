@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,6 +22,8 @@
                 <outlet property="MethodsegmentsControl" destination="m0I-BN-2sZ" id="ccl-ey-D4D"/>
                 <outlet property="PathTextField" destination="IoH-qD-Uzf" id="ztL-DV-NWb"/>
                 <outlet property="ResponseShowTextView" destination="B90-Qv-iDE" id="tFC-xE-kHj"/>
+                <outlet property="showButton" destination="aiW-0S-rzK" id="dRG-js-cqx"/>
+                <outlet property="showchange" destination="kfR-qj-bQp" id="bzw-Wj-fNO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -114,7 +117,7 @@
                     </constraints>
                 </stackView>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="m0I-BN-2sZ">
-                    <rect key="frame" x="72" y="254.5" width="222" height="29"/>
+                    <rect key="frame" x="72" y="254.5" width="222" height="39.5"/>
                     <segments>
                         <segment title="GET"/>
                         <segment title="POST"/>
@@ -124,7 +127,7 @@
                     </connections>
                 </segmentedControl>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiW-0S-rzK">
-                    <rect key="frame" x="50" y="305.5" width="275" height="30"/>
+                    <rect key="frame" x="50" y="316" width="275" height="30"/>
                     <color key="backgroundColor" red="0.096382273996036175" green="0.19494220700553808" blue="0.6086809961928934" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="1Fh-MG-fAC"/>
@@ -139,28 +142,46 @@
                         <action selector="ShowAction:" destination="-1" eventType="touchUpInside" id="oNa-16-WQO"/>
                     </connections>
                 </button>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="none" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="B90-Qv-iDE">
-                    <rect key="frame" x="16" y="355.5" width="343" height="301.5"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                </textView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="T3z-86-ZLL">
+                    <rect key="frame" x="16" y="356" width="343" height="290"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVE-3L-5oA">
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                            <color key="backgroundColor" red="0.27546520234881205" green="0.6086809961928934" blue="0.2393549248203079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="P8O-NW-Req"/>
+                            </constraints>
+                            <state key="normal" title="表示の切り替え">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="showchangeTap:" destination="-1" eventType="touchUpInside" id="kOE-Gb-Uqb"/>
+                            </connections>
+                        </button>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="none" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="B90-Qv-iDE">
+                            <rect key="frame" x="0.0" y="30" width="343" height="260"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
+                </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="B90-Qv-iDE" secondAttribute="trailing" constant="16" id="20V-h7-Ugg"/>
-                <constraint firstItem="B90-Qv-iDE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="66b-aI-K6m"/>
                 <constraint firstItem="m0I-BN-2sZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="72" id="6ZF-cu-59V"/>
                 <constraint firstItem="wiZ-Ck-bfG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="M6z-6s-LEE"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="m0I-BN-2sZ" secondAttribute="trailing" constant="81" id="N9h-Or-FAR"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wiZ-Ck-bfG" secondAttribute="trailing" constant="10" id="TSC-K8-L1g"/>
-                <constraint firstItem="B90-Qv-iDE" firstAttribute="top" secondItem="aiW-0S-rzK" secondAttribute="bottom" constant="20" id="eat-Id-Gtq"/>
+                <constraint firstItem="T3z-86-ZLL" firstAttribute="centerX" secondItem="aiW-0S-rzK" secondAttribute="centerX" id="ZNV-tN-hl0"/>
                 <constraint firstItem="aiW-0S-rzK" firstAttribute="top" secondItem="m0I-BN-2sZ" secondAttribute="bottom" constant="23" id="hIe-BU-gpV"/>
+                <constraint firstItem="T3z-86-ZLL" firstAttribute="top" secondItem="aiW-0S-rzK" secondAttribute="bottom" constant="10" id="kfR-qj-bQp"/>
                 <constraint firstItem="m0I-BN-2sZ" firstAttribute="top" secondItem="wiZ-Ck-bfG" secondAttribute="bottom" constant="20" id="lCo-ZA-op2"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aiW-0S-rzK" secondAttribute="trailing" constant="50" id="pAf-AO-dre"/>
                 <constraint firstItem="wiZ-Ck-bfG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="qTw-JU-nlI"/>
                 <constraint firstItem="aiW-0S-rzK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="qes-YW-YX1"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="B90-Qv-iDE" secondAttribute="bottom" constant="10" id="v0J-I8-wPA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="T3z-86-ZLL" secondAttribute="bottom" constant="21" id="sG5-7t-gDS"/>
+                <constraint firstItem="T3z-86-ZLL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="z30-ec-xwq"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="34.5" y="63.5"/>
