@@ -142,11 +142,11 @@
                         <action selector="ShowAction:" destination="-1" eventType="touchUpInside" id="oNa-16-WQO"/>
                     </connections>
                 </button>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="T3z-86-ZLL">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="T3z-86-ZLL">
                     <rect key="frame" x="16" y="356" width="343" height="290"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVE-3L-5oA">
-                            <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                            <rect key="frame" x="235" y="0.0" width="108" height="30"/>
                             <color key="backgroundColor" red="0.27546520234881205" green="0.6086809961928934" blue="0.2393549248203079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="P8O-NW-Req"/>
@@ -160,11 +160,17 @@
                         </button>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="none" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="B90-Qv-iDE">
                             <rect key="frame" x="0.0" y="30" width="343" height="260"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" red="1" green="0.8786057500925244" blue="0.76964957782747667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
                     </subviews>
+                    <constraints>
+                        <constraint firstItem="B90-Qv-iDE" firstAttribute="top" secondItem="lVE-3L-5oA" secondAttribute="bottom" id="9yc-67-hbb"/>
+                        <constraint firstItem="B90-Qv-iDE" firstAttribute="leading" secondItem="T3z-86-ZLL" secondAttribute="leading" id="Q0f-ZA-3hK"/>
+                        <constraint firstAttribute="bottom" secondItem="B90-Qv-iDE" secondAttribute="bottom" id="hsK-Fi-7fq"/>
+                        <constraint firstAttribute="trailing" secondItem="B90-Qv-iDE" secondAttribute="trailing" id="rVf-wc-h79"/>
+                    </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
