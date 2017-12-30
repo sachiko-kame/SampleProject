@@ -54,10 +54,10 @@ struct OrignalRequest: Sample {
 
 
 struct OrignalItem {
-    let Itemobject:Any
+    let Itemobject:Any?
     
-    init(object: Any){
-        self.Itemobject = object
+    init(object: Any?){
+        self.Itemobject = object ?? ""
     }
 }
 
