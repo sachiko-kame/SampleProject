@@ -61,12 +61,7 @@ class SampleProjectUITests: XCTestCase {
         let app = XCUIApplication()
         let tablesQuery = app.tables
         tablesQuery.cells.containing(.staticText, identifier:"qiita").staticTexts["detailText"].tap()
-        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["https://qiita.com/_kazuki_o/items/3579f6a8a8261d223603"]/*[[".cells.staticTexts[\"https:\/\/qiita.com\/_kazuki_o\/items\/3579f6a8a8261d223603\"]",".staticTexts[\"https:\/\/qiita.com\/_kazuki_o\/items\/3579f6a8a8261d223603\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        
-        let link = app.textViews.containing(.link, identifier:"￼").children(matching: .link).matching(identifier: "￼").element(boundBy: 0)
-        link.swipeUp()
-        link.swipeUp()
-        link.swipeUp()
+        tablesQuery.children(matching: .cell).element(boundBy: 1).tap()
         app.navigationBars["SampleProject.QiitaDetileView"].buttons["Back"].tap()
         app.navigationBars["SampleProject.QiitaView"].buttons["Back"].tap()
         
