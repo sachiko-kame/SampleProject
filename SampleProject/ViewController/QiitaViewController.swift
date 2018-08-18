@@ -37,6 +37,7 @@ class QiitaViewController: UIViewController,UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.navigationController?.pushViewController(QiitaDetileViewController(Item:qiitaModel.geItems(indexPath: indexPath as NSIndexPath)), animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
+    self.navigationController?.pushViewController(QiitaDetileViewController(Item:qiitaModel.geItems(indexPath: indexPath as NSIndexPath)), animated: true)
     }
 }
