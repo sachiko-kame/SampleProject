@@ -28,8 +28,8 @@ struct SampleRequest: Sample {
         ]
     }
     
-    func response(from object: Any, urlResponse: HTTPURLResponse) throws -> QiitaItem {
-        return try QiitaItem(object: object)
+    func response(from object: Any, urlResponse: HTTPURLResponse) throws -> Response {
+        return try Response(object: object)
     }
 }
 

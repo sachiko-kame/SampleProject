@@ -48,7 +48,7 @@ struct OrignalRequest: Sample {
     }
     
     func response(from object: Any, urlResponse: HTTPURLResponse) throws -> Response {
-        return OrignalItem(object: object)
+        return Response(object: object)
     }
 }
 

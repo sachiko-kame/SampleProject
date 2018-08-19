@@ -26,7 +26,7 @@ struct QiitaDetileRequest: Sample {
     }
     
     func response(from object: Any, urlResponse: HTTPURLResponse) throws -> Response {
-        return try QiitaDetileitem(object: object)
+        return try Response(object: object)
     }
 }
 
